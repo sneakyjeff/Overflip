@@ -1,17 +1,19 @@
-DATE: 02/27/2018
-
-PROJECT TITLE: 
+##PROJECT TITLE: 
 Flask tutorial with CRUD functionality setup by following instructions from https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
-CURRENT PROJECT STRUCTURE SO FAR:
+'''
+CURRENT PROJECT STRUCTURE TO DATE:
 FlaskOverflip/
   venv/
   app/
     __init__.py
-    routes.py
+    routes.
+    forms.py
   overflip.py
+  readme.md
+'''
 
-NEEDED INSTALLATION:
+###PACKAGES NEEDED TO RUN FILES
 >Python3
 
 Flask (using pip)
@@ -25,3 +27,6 @@ deactivate to exit virtual enviroment
 
 export FLASK_APP=overflip.py
 flask run
+
+To handle web forms, using flask-wtf
+pip install flask-wtf
