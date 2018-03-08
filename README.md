@@ -1,4 +1,4 @@
-##PROJECT TITLE: 
+## PROJECT TITLE: 
 Flask tutorial with CRUD functionality setup by following instructions from https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 '''
@@ -9,11 +9,18 @@ FlaskOverflip/
     __init__.py
     routes.
     forms.py
+    templates/
+      base.html
+      index.html
+      login.html
+      payment.html
+  migrations/
+  config.py
   overflip.py
   readme.md
 '''
 
-###PACKAGES NEEDED TO RUN FILES
+## PACKAGES NEEDED TO RUN FILES
 >Python3
 
 Flask (using pip)
@@ -28,5 +35,8 @@ deactivate to exit virtual enviroment
 export FLASK_APP=overflip.py
 flask run
 
-To handle web forms, using flask-wtf
+To handle web forms, using flask-wtf extension
 pip install flask-wtf
+
+using flask-sqlalchemy
+pip install flask-sqlalchemy

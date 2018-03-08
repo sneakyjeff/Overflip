@@ -12,7 +12,13 @@
         <div>
           Overflip: 
           <a href="{{ url_for('index') }}">Home</a>
+          <!-- the default page will appear different depending on if user is logged in or not. -->
+          {% if current_user.is_anonymous %}
           <a href="{{ url_for('login') }}">Login</a>
+          {% else %}
+          <a href="{{ url_for('payment') }}">Payment</a>
+          <a href="{{ url_for('logout') }}">Logout</a>
+          {% endif %}
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
