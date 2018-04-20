@@ -40,3 +40,7 @@ pip install flask-wtf
 
 using flask-sqlalchemy
 pip install flask-sqlalchemy
+
+
+## Features to add:
+be able to delete users

@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+#login manager allows you to manage user between pages
 login = LoginManager(app)
 #this url_for('index') is the redirection after user logs in. Change this once you decide what the login page to look like
 login.login_view = 'login'
