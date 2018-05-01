@@ -32,6 +32,7 @@ source venv/bin/activate to activate/enter enviroment
 
 deactivate to exit virtual enviroment
 
+source venv/bin/activate
 export FLASK_APP=overflip.py
 flask run
 

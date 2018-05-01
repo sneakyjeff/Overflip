@@ -21,44 +21,30 @@
     </head>
 
     <body>
-        <div>
-
-          <!-- Navbar -->
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
-              </div>
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
-                {% if current_user.is_anonymous %}
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                {% else %}
-                <li><a href="{{ url_for('user', username=current_user.username) }}">Profile</a></li>
-                <li><a href="{{ url_for('payment') }}">Payment</a></li>
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                {% endif %}
-              </ul>
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
             </div>
-          </nav>
 
-          <!-- End navbar -->
+            <!-- the default page will appear different depending on if user is logged in or not. -->
 
-          <!-- the default page will appear different depending on if user is logged in or not. -->
-          
-          <!-- Overflip: 
-          <a href="{{ url_for('index') }}">Home</a>
-          
-          {% if current_user.is_anonymous %}
-          <a href="{{ url_for('login') }}">Login</a>
-          {% else %}
-          <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-          <a href="{{ url_for('payment') }}">Payment</a>
-          <a href="{{ url_for('logout') }}">Logout</a>
-          {% endif %} -->
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+              {% if current_user.is_anonymous %}
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+              {% else %}
+              <li><a href="{{ url_for('user', username=current_user.username) }}">Profile</a></li>
+              <li><a href="{{ url_for('payment') }}">Payment</a></li>
+              <li><a href="{{ url_for('logout') }}">Logout</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </nav>
+        <!-- End navbar -->
 
-        </div>
-        <hr>
+
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
