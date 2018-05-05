@@ -34,7 +34,7 @@ deactivate to exit virtual enviroment
 
 source venv/bin/activate
 export FLASK_APP=overflip.py
-flask run
+FLASK_DEBUG=1 flask run
 
 To handle web forms, using flask-wtf extension
 pip install flask-wtf
