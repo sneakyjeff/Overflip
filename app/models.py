@@ -13,6 +13,11 @@ followers = db.Table('followers',
 def load_user(id):
     return User.query.get(int(id))
 
+
+#db.Model acts as the database mapping and ORM. ORMS allow you to work with the database on a higher level without directly using SQL statements.
+
+# UserMixin is a flask login package that handles users session. Flask Login provides user session management 
+# for Flask. It handles the common tasks of logging in, logging out, and remembering your users' sessions over extended periods of time.
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
