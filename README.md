@@ -1,5 +1,7 @@
 ## PROJECT TITLE: 
-Flask tutorial with CRUD functionality setup by following instructions from https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+Flask tutorial with CRUD functionality
+
+### INPROGRESS
 
 '''
 CURRENT PROJECT STRUCTURE TO DATE:
