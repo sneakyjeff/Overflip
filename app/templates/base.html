@@ -7,6 +7,10 @@
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+      <link rel="stylesheet" href="{{ url_for('static', filename='edits.css') }}">
+
+      <script type="text/javascript" src="{{ url_for('static', filename='functions.js') }}"></script>
+
       <!-- jQuery library -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -21,6 +25,10 @@
     </head>
 
     <body>
+        <h1 id="firsthead">header1</h1>
+
+        <!-- Only show navbars if user is logged in -->
+        {% if current_user.is_authenticated %}
         <!-- Navbar -->
         <nav class="navbar navbar-default">
           <div class="container-fluid">
@@ -43,6 +51,7 @@
           </div>
         </nav>
         <!-- End navbar -->
+        {% endif %}
 
 
         {% with messages = get_flashed_messages() %}
