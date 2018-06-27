@@ -1,5 +1,5 @@
 ## PROJECT TITLE: 
-Flask tutorial with CRUD functionality
+Flask tutorial with CRUD functionality following miguel grinberg
 
 ### INPROGRESS
 
